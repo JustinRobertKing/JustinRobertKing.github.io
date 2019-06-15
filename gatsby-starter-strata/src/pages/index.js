@@ -15,35 +15,7 @@ import beersavorui from './beersavorui.gif'
 import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/layout'
-// import Lightbox from 'react-images'
-import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
-
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
-
-// import pewPewREADME from '../assets/readmes/pewPewREADME.md'
-// import beerSavorREADME from '../assets/readmes/beerSavorREADME.md'
-// import cutColorREADME from '../assets/readmes/cutColorREADME.md'
-
-const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', src: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', src: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', src: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
-];
 
 class HomeIndex extends React.Component {
 
@@ -58,59 +30,11 @@ class HomeIndex extends React.Component {
             cut: null        
         };
 
-        this.closeLightbox = this.closeLightbox.bind(this);
-        this.gotoNext = this.gotoNext.bind(this);
-        this.gotoPrevious = this.gotoPrevious.bind(this);
-        this.openLightbox = this.openLightbox.bind(this);
-        this.handleClickImage = this.handleClickImage.bind(this);
-    }
-
-    // componentWillMount() {
-    //     fetch(pewPewREADME).then((response) => response.text()).then((text) => {
-    //         console.log('pew', text)
-    //         this.setState({ pew: text })
-    //     })
-    //     fetch(beerSavorREADME).then((response) => response.text()).then((text) => {
-    //         console.log('beer', text)
-    //         this.setState({ beer: text })
-    //     })
-    //     fetch(cutColorREADME).then((response) => response.text()).then((text) => {
-    //         console.log('cut', text)
-    //         this.setState({ cut: text })
-    //     })
-    // }
-    openLightbox (index, event) {
-        event.preventDefault();
-        this.setState({
-            currentImage: index,
-            lightboxIsOpen: true,
-        });
-    }
-    closeLightbox () {
-        this.setState({
-            currentImage: 0,
-            lightboxIsOpen: false,
-        });
-    }
-    gotoPrevious () {
-        this.setState({
-            currentImage: this.state.currentImage - 1,
-        });
-    }
-    gotoNext () {
-        this.setState({
-            currentImage: this.state.currentImage + 1,
-        });
-    }
-    handleClickImage () {
-        if (this.state.currentImage === this.props.images.length - 1) return;
-
-        this.gotoNext();
     }
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+        const siteTitle = "J/K || Portfolio"
+        const siteDescription = "Justin King's Dev Portfolio"
 
         return (
             <Layout>
@@ -126,9 +50,6 @@ class HomeIndex extends React.Component {
                             <h2>Full-Stack Developer </h2>
                         </header>
                         <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
-{/*                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>*/}
                     </section>
 
                     <section id="two">
@@ -148,8 +69,10 @@ class HomeIndex extends React.Component {
                                 <Card.Body><ReactMarkdown source={this.state.cut} />
                                     <p style={{color: '#b2b2b2'}}>Cut / Color is a full-service consultation and scheduling solution designed for salon professionals and is built on the MERN stack</p>
                                     <p style={{color: '#b2b2b2'}}>TECH: React.js | Express | JSX | Axios | MongoDB | Mongoose | JavaScript | Token Authentication | HTML | CSS | Bootstrap</p>
-                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
-                                </Card.Body>
+                                    <p><a style={{color: '#b2b2b2'}} href="https://cut-color.herokuapp.com">Live Link</a><br />
+                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/salon-server">Github Repository (server)</a>
+                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/salon-client">Github Repository (client)</a>
+                                    </p>                                </Card.Body>
                             </Accordion.Collapse>
                             </Card>
                             <Card style={{padding: '15px 0 0 0', margin: '15px 0 0 0', borderTop: '1px solid #b2b2b2'}}>
@@ -166,8 +89,9 @@ class HomeIndex extends React.Component {
                                 <Card.Body><ReactMarkdown source={this.state.beer} />
                                     <p style={{color: '#b2b2b2'}}>Beer Savor is an exploratory brewery finding app built in Node.js </p>
                                     <p style={{color: '#b2b2b2'}}>TECH: Node.js | Express | JavaScript | EJS | SQL | PostgreSQL | Sequelize | AJAX | Web APIs | OAuth | JQuery | HTML | CSS | Materialize | MapBox</p>
-                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
-                                </Card.Body>
+                                    <p><a style={{color: '#b2b2b2'}} href="https://beer-savor.herokuapp.com/">Live Link</a><br />
+                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/project2">Github Repository</a>
+                                    </p>                                </Card.Body>
                             </Accordion.Collapse>
                             </Card>
                             <Card style={{padding: '15px 0 0 0', margin: '15px 0 0 0', borderTop: '1px solid #b2b2b2'}}>
@@ -181,15 +105,13 @@ class HomeIndex extends React.Component {
                                 <Card.Body><ReactMarkdown source={this.state.pew} />
                                     <p style={{color: '#b2b2b2'}}>Pew Pew is a space-shooter game built in the Phaser framework for HTML5 canvas</p>
                                     <p style={{color: '#b2b2b2'}}>TECH: Phaser.io | JavaScript | HTML | CSS</p>
-                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
+                                    <p><a style={{color: '#b2b2b2'}} href="https://justinrobertking.github.io/space-game/game/">Live Link</a><br />
+                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/space-game">Github Repository</a>
+                                    </p>
                                 </Card.Body>
                             </Accordion.Collapse>
                             </Card>
                         </Accordion>
-
-{/*                        <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>*/}
                     </section>
 
                     <section id="three"> 
