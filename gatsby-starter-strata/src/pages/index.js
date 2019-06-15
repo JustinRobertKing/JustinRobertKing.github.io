@@ -4,8 +4,15 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Background1 from './Background1.jpg'
+import Background2 from './Background2.jpg'
+import pew from './pew.png'
+import landing from './landing.png'
+import client from './client.png'
+import cutcolorclip from './cutcolorclip.gif'
+import beerlanding from './beerlanding.png'
+import beermap from './beermap.png'
+import beersavorui from './beersavorui.gif'
 import ReactMarkdown from 'react-markdown'
-
 
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
@@ -25,9 +32,9 @@ import full04 from '../assets/images/fulls/04.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-import pewPewREADME from '../assets/readmes/pewPewREADME.md'
-import beerSavorREADME from '../assets/readmes/beerSavorREADME.md'
-import cutColorREADME from '../assets/readmes/cutColorREADME.md'
+// import pewPewREADME from '../assets/readmes/pewPewREADME.md'
+// import beerSavorREADME from '../assets/readmes/beerSavorREADME.md'
+// import cutColorREADME from '../assets/readmes/cutColorREADME.md'
 
 const DEFAULT_IMAGES = [
     { id: '1', src: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
@@ -48,7 +55,8 @@ class HomeIndex extends React.Component {
             currentImage: 0,
             pew: null,
             beer: null,
-            cut: null        };
+            cut: null        
+        };
 
         this.closeLightbox = this.closeLightbox.bind(this);
         this.gotoNext = this.gotoNext.bind(this);
@@ -57,20 +65,20 @@ class HomeIndex extends React.Component {
         this.handleClickImage = this.handleClickImage.bind(this);
     }
 
-    componentWillMount() {
-        fetch(pewPewREADME).then((response) => response.text()).then((text) => {
-            console.log('pew', text)
-            this.setState({ pew: text })
-        })
-        fetch(beerSavorREADME).then((response) => response.text()).then((text) => {
-            console.log('beer', text)
-            this.setState({ beer: text })
-        })
-        fetch(cutColorREADME).then((response) => response.text()).then((text) => {
-            console.log('cut', text)
-            this.setState({ cut: text })
-        })
-    }
+    // componentWillMount() {
+    //     fetch(pewPewREADME).then((response) => response.text()).then((text) => {
+    //         console.log('pew', text)
+    //         this.setState({ pew: text })
+    //     })
+    //     fetch(beerSavorREADME).then((response) => response.text()).then((text) => {
+    //         console.log('beer', text)
+    //         this.setState({ beer: text })
+    //     })
+    //     fetch(cutColorREADME).then((response) => response.text()).then((text) => {
+    //         console.log('cut', text)
+    //         this.setState({ cut: text })
+    //     })
+    // }
     openLightbox (index, event) {
         event.preventDefault();
         this.setState({
@@ -117,46 +125,64 @@ class HomeIndex extends React.Component {
                         <header className="major">
                             <h2>Full-Stack Developer </h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+                        <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
 {/*                        <ul className="actions">
                             <li><a href="#" className="button">Learn More</a></li>
                         </ul>*/}
                     </section>
 
                     <section id="two">
-                        <h2>Recent Work</h2>
+                        <h2>Recent Work <small>(click for details)</small></h2>
                         <Accordion>
-                            <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} style={{outline: 'none', textDecoration: 'none'}} variant="link" eventKey="0">
-                                    <h2 style={{textAlign: 'left'}} >PEW PEW</h2>
-                                    <img src={Background1} style={{width: '100%', height: 'auto', borderRadius: '5px'}} />
-                                </Accordion.Toggle>
-                            </Card.Header>
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body><ReactMarkdown source={this.state.pew} /></Card.Body>
-                            </Accordion.Collapse>
-                            </Card>
-                            <Card>
-                            <Card.Header>
-                                <Accordion.Toggle as={Button} style={{outline: 'none', textDecoration: 'none'}} variant="link" eventKey="1">
-                                    <h2 style={{textAlign: 'left'}} >BEER SAVOR</h2>
-                                    <img src={Background1} style={{width: '100%', height: 'auto', borderRadius: '5px'}} />
-                                </Accordion.Toggle>
-                            </Card.Header>
-                            <Accordion.Collapse eventKey="1">
-                                <Card.Body><ReactMarkdown source={this.state.beer} /></Card.Body>
-                            </Accordion.Collapse>
-                            </Card>
-                            <Card>
+                            <Card style={{padding: '15px 0 0 0', margin: '15px 0 0 0', borderTop: '1px solid #b2b2b2'}}>
                             <Card.Header>
                                 <Accordion.Toggle as={Button} style={{outline: 'none', textDecoration: 'none'}} variant="link" eventKey="2">
-                                    <h2 style={{textAlign: 'left'}} >CUT / COLOR</h2>
-                                    <img src={Background1} style={{width: '100%', height: 'auto', borderRadius: '5px'}} />
+                                    <img src={landing} style={{width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <img src={client} style={{margin: '0 2%', width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <img src={cutcolorclip} style={{width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <br />
+                                    <h1 style={{position: 'relative ', top: '50%', left: '50%', transform: 'translate(-50%, 0%)', margin: 0}} >CUT / COLOR</h1>
                                 </Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="2">
-                                <Card.Body><ReactMarkdown source={this.state.cut} /></Card.Body>
+                                <Card.Body><ReactMarkdown source={this.state.cut} />
+                                    <p style={{color: '#b2b2b2'}}>Cut / Color is a full-service consultation and scheduling solution designed for salon professionals and is built on the MERN stack</p>
+                                    <p style={{color: '#b2b2b2'}}>TECH: React.js | Express | JSX | Axios | MongoDB | Mongoose | JavaScript | Token Authentication | HTML | CSS | Bootstrap</p>
+                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                            </Card>
+                            <Card style={{padding: '15px 0 0 0', margin: '15px 0 0 0', borderTop: '1px solid #b2b2b2'}}>
+                            <Card.Header>
+                                <Accordion.Toggle as={Button} style={{outline: 'none', textDecoration: 'none'}} variant="link" eventKey="1">    
+                                    <img src={beerlanding} style={{width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <img src={beermap} style={{margin: '0 2%', width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <img src={beersavorui} style={{width: '32%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <br />
+                                    <h1 style={{position: 'relative ', top: '50%', left: '50%', transform: 'translate(-50%, 0%)', margin: 0}} >BEER SAVOR</h1>
+                                </Accordion.Toggle>
+                            </Card.Header>
+                            <Accordion.Collapse eventKey="1">
+                                <Card.Body><ReactMarkdown source={this.state.beer} />
+                                    <p style={{color: '#b2b2b2'}}>Beer Savor is an exploratory brewery finding app built in Node.js </p>
+                                    <p style={{color: '#b2b2b2'}}>TECH: Node.js | Express | JavaScript | EJS | SQL | PostgreSQL | Sequelize | AJAX | Web APIs | OAuth | JQuery | HTML | CSS | Materialize | MapBox</p>
+                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
+                                </Card.Body>
+                            </Accordion.Collapse>
+                            </Card>
+                            <Card style={{padding: '15px 0 0 0', margin: '15px 0 0 0', borderTop: '1px solid #b2b2b2'}}>
+                            <Card.Header>
+                                <Accordion.Toggle as={Button} style={{outline: 'none', textDecoration: 'none'}} variant="link" eventKey="0">
+                                    <img src={pew} style={{width: '100%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} />
+                                    <h1 style={{position: 'relative ', top: '50%', left: '50%', transform: 'translate(-50%, 0%)', margin: 0}} >PEW PEW</h1>
+                                </Accordion.Toggle>
+                            </Card.Header>
+                            <Accordion.Collapse eventKey="0">
+                                <Card.Body><ReactMarkdown source={this.state.pew} />
+                                    <p style={{color: '#b2b2b2'}}>Pew Pew is a space-shooter game built in the Phaser framework for HTML5 canvas</p>
+                                    <p style={{color: '#b2b2b2'}}>TECH: Phaser.io | JavaScript | HTML | CSS</p>
+                                    <p>I am a solutions-driven software developer with a sharp, analytical mind who is highly motivated by challenge. My aptitude for digesting and implementing new technologies makes me both efficient when given a clear task, and exceptionally versatile when faced with ambiguity or road blocks.</p>
+                                </Card.Body>
                             </Accordion.Collapse>
                             </Card>
                         </Accordion>
@@ -168,64 +194,110 @@ class HomeIndex extends React.Component {
 
                     <section id="three"> 
                         <h2>Hard Skills</h2>
-                        <div className="4u 12u$(small)">
-                            <ul className="labeled-icons">
-                                <li>
-                                    JavaScript<br />
-                                    React<br />
-                                    Node.js<br />
-                                    Express<br />
-                                    Python<br />
-                                    JQuery<br />
-                                    CSS<br />
-                                    HTML<br />
-                                    Redux<br />
-                                    EJS<br />
-                                    ES6<br />
-                                    JSX<br />
-                                    AJAX<br />
-                                    Axios<br />
-                                    Phaser.io<br />
-                                    Bootstrap<br />
-                                    Materialize<br />
-                                    APIs<br />
-                                    RESTful Routing<br />
-                                </li>
-                            </ul>
+                        <div className="row">
+                            <div className="3u 6u$(small)">
+                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
+                                <ul className="labeled-icons">
+                                    <li>
+                                        JavaScript<br />
+                                        React<br />
+                                        Node.js<br />
+                                        Gatsby.js
+                                        Express<br />
+                                        Python<br />
+                                        JQuery<br />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="3u 6u$(small)">
+                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
+                                <ul className="labeled-icons">
+                                    <li>
+                                        CSS<br />
+                                        HTML<br />
+                                        Redux<br />
+                                        EJS<br />
+                                        ES6<br />
+                                        JSX<br />
+                                    </li>            
+                                </ul>
+                            </div>
+                            <div className="3u 6u$(small)">
+                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
+                                <ul className="labeled-icons">
+                                    <li>
+                                        AJAX<br />
+                                        Axios<br />
+                                        Fetch<br />
+                                        Phaser.io<br />
+                                        Bootstrap<br />
+                                        Materialize<br />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="3u 6u$(small)">
+                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
+                                <ul className="labeled-icons">
+                                    <li>
+                                        SQL<br />
+                                        PostgreSQL<br />
+                                        Sequelize (ORM)<br />
+                                        MongoDB<br />
+                                        Mongoose (ORM)<br />
+                                        Django<br />
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <h2>Methodologies</h2>
+                            Agile / Scrum | 
+                            Object Oriented Programming | 
+                            MVC Pattern | 
+                            Test-Driven Development | 
+                            Responsive Design | 
+                            Authentication (OAuth/Sesssions/Tokens) | 
+                            CRUD Operations | 
+                            RESTful Routing
+
                     </section>
 
                     <section id="four">
                         <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                        <p>Please don't hesitate to reach out. I love connecting with other folks who are passionate about tech.</p>
                         <div className="row">
-                            <div className="8u 12u$(small)">
-                                <form method="post" action="#">
-                                    <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                                        <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                                    </div>
-                                </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                            <div className="4u 12u$(small)">
+                            <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        12711 NE 120th St #A4<br />
-                                        Kirkland, WA 98034<br />
-                                        United States
+                                        <a href="https://www.linkedin.com/in/justinrobertking/">
+                                        <h3 className="icon fa-linkedin"><span className="label">Address</span></h3>
+                                        Linked In</a>
                                     </li>
+                                </ul>
+                            </div>
+                            <div className="3u 12u$(small)">
+                                <ul className="labeled-icons">
                                     <li>
-                                        <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        (425) 210-0362
+                                        <a href="https://github.com/JustinRobertKing">
+                                        <h3 className="icon fa-github"><span className="label">Address</span></h3>
+                                        Github</a>
                                     </li>
+                                </ul>
+                            </div>
+                            <div className="3u 12u$(small)">
+                                <ul className="labeled-icons">
                                     <li>
+                                        <a href="mailto:kingj4@spu.edu">
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="mailto:kingj4@spu.edu">kingj4@spu.edu</a>
+                                        kingj4@spu.edu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="3u 12u$(small)">
+                                <ul className="labeled-icons">
+                                    <li>
+                                        <a href="https://justinrobertking.github.io/resume/">
+                                        <h3 className="icon fa-file"><span className="label">Resume</span></h3>                  
+                                        Resume</a>
                                     </li>
                                 </ul>
                             </div>
