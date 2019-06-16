@@ -70,7 +70,7 @@ class HomeIndex extends React.Component {
                                     <p style={{color: '#b2b2b2'}}>Cut / Color is a full-service consultation and scheduling solution designed for salon professionals and is built on the MERN stack</p>
                                     <p style={{color: '#b2b2b2'}}>TECH: React.js | Express | JSX | Axios | MongoDB | Mongoose | JavaScript | Token Authentication | HTML | CSS | Bootstrap</p>
                                     <p><a style={{color: '#b2b2b2'}} href="https://cut-color.herokuapp.com">Live Link</a><br />
-                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/salon-server">Github Repository (server)</a>
+                                        <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/salon-server">Github Repository (server)</a><br />
                                         <a style={{color: '#b2b2b2'}} href="https://github.com/JustinRobertKing/salon-client">Github Repository (client)</a>
                                     </p>                                </Card.Body>
                             </Accordion.Collapse>
@@ -118,59 +118,51 @@ class HomeIndex extends React.Component {
                         <h2>Hard Skills</h2>
                         <div className="row">
                             <div className="3u 6u$(small)">
-                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
-                                <ul className="labeled-icons">
-                                    <li>
+                                <div className="labeled-icons">
                                         JavaScript<br />
                                         React<br />
                                         Node.js<br />
-                                        Gatsby.js
+                                        Gatsby.js<br />
                                         Express<br />
                                         Python<br />
                                         JQuery<br />
-                                    </li>
-                                </ul>
+                                </div>
                             </div>
                             <div className="3u 6u$(small)">
-                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
-                                <ul className="labeled-icons">
-                                    <li>
+                                <div className="labeled-icons">
                                         CSS<br />
                                         HTML<br />
                                         Redux<br />
                                         EJS<br />
                                         ES6<br />
                                         JSX<br />
-                                    </li>            
-                                </ul>
+                                        Git<br />
+                                </div>
                             </div>
                             <div className="3u 6u$(small)">
-                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
-                                <ul className="labeled-icons">
-                                    <li>
+                                <div className="labeled-icons">
                                         AJAX<br />
                                         Axios<br />
                                         Fetch<br />
                                         Phaser.io<br />
                                         Bootstrap<br />
                                         Materialize<br />
-                                    </li>
-                                </ul>
+                                        Heroku<br />
+                                </div>
                             </div>
                             <div className="3u 6u$(small)">
-                                <h4 style={{borderBottom: '1px solid b2b2b2'}}></h4>
-                                <ul className="labeled-icons">
-                                    <li>
+                                <div className="labeled-icons">
                                         SQL<br />
                                         PostgreSQL<br />
-                                        Sequelize (ORM)<br />
+                                        Sequelize<br />
                                         MongoDB<br />
-                                        Mongoose (ORM)<br />
+                                        Mongoose<br />
                                         Django<br />
-                                    </li>
-                                </ul>
+                                        Flask<br />
+                                </div>
                             </div>
                         </div>
+                        <br />
                         <h2>Methodologies</h2>
                             Agile / Scrum | 
                             Object Oriented Programming | 
@@ -217,7 +209,7 @@ class HomeIndex extends React.Component {
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://justinrobertking.github.io/resume/">
+                                        <a href="https://justinrobertking.github.io/resume/resume.pdf">
                                         <h3 className="icon fa-file"><span className="label">Resume</span></h3>                  
                                         Resume</a>
                                     </li>

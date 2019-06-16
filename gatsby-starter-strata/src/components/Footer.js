@@ -9,7 +9,7 @@ class Footer extends React.Component {
                         <li><a href="https://www.linkedin.com/in/justinrobertking/" className="icon fa-linkedin"><span className="label">Linked In</span></a></li>
                         <li><a href="https://github.com/JustinRobertKing" className="icon fa-github"><span className="label">Github</span></a></li>
                         <li><a href="mailto:kingj4@spu.edu" className="icon fa-envelope-o"><span className="label">Email</span></a></li>
-                        <li><a href="https://justinrobertking.github.io/resume/" className="icon fa-file"><span className="label">Resume</span></a></li>                        
+                        <li><a href="https://justinrobertking.github.io/resume/resume.pdf" className="icon fa-file"><span className="label">Resume</span></a></li>                        
                     </ul>
                     {/*<ul className="copyright">
                         <li>&copy; Gatsby Starter Strata</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
