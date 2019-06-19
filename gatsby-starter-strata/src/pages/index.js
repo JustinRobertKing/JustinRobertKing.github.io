@@ -172,7 +172,6 @@ class HomeIndex extends React.Component {
                             Authentication (OAuth/Sesssions/Tokens) | 
                             CRUD Operations | 
                             RESTful Routing
-
                     </section>
 
                     <section id="four">
@@ -182,36 +181,28 @@ class HomeIndex extends React.Component {
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://www.linkedin.com/in/justinrobertking/">
-                                        <h3 className="icon fa-linkedin"><span className="label">Address</span></h3>
-                                        Linked In</a>
+                                        <a href="https://www.linkedin.com/in/justinrobertking/" className="icon fa-linkedin"><span className="label">Linked In</span></a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://github.com/JustinRobertKing">
-                                        <h3 className="icon fa-github"><span className="label">Address</span></h3>
-                                        Github</a>
+                                        <a href="https://github.com/JustinRobertKing" className="icon fa-github"><span className="label">Github</span></a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="mailto:kingj4@spu.edu">
-                                        <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        kingj4@spu.edu</a>
+                                        <a href="mailto:justinking.jrk@gmail.com" className="icon fa-envelope-o"><span className="label">Email</span></a>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://justinrobertking.github.io/resume/resume.pdf">
-                                        <h3 className="icon fa-file"><span className="label">Resume</span></h3>                  
-                                        Resume</a>
+                                        <a href="https://justinrobertking.github.io/resume/resume.pdf" target="_blank" className="icon fa-file"><span className="label">Resume</span></a>
                                     </li>
                                 </ul>
                             </div>
