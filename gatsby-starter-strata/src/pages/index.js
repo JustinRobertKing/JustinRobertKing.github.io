@@ -181,28 +181,28 @@ class HomeIndex extends React.Component {
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://www.linkedin.com/in/justinrobertking/" className="icon fa-linkedin"><span className="label">Linked In</span></a>
+                                        <h1><a href="https://www.linkedin.com/in/justinrobertking/" className="icon fa-linkedin"><span className="label">Linked In</span></a></h1>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://github.com/JustinRobertKing" className="icon fa-github"><span className="label">Github</span></a>
+                                        <h1><a href="https://github.com/JustinRobertKing" className="icon fa-github"><span className="label">Github</span></a></h1>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="mailto:justinking.jrk@gmail.com" className="icon fa-envelope-o"><span className="label">Email</span></a>
+                                        <h1><a href="mailto:justinking.jrk@gmail.com" className="icon fa-envelope-o"><span className="label">Email</span></a></h1>
                                     </li>
                                 </ul>
                             </div>
                             <div className="3u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
-                                        <a href="https://justinrobertking.github.io/resume/resume.pdf" target="_blank" className="icon fa-file"><span className="label">Resume</span></a>
+                                        <h1><a href="https://justinrobertking.github.io/resume/resume.pdf" target="_blank" className="icon fa-file"><span className="label">Resume</span></a></h1>
                                     </li>
                                 </ul>
                             </div>
